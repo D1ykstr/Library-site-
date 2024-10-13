@@ -1,6 +1,6 @@
 const slides = document.querySelectorAll('.poster>li');
  const dots = document.querySelectorAll(".next-main-slider-dots>span");
- const interval = 3;
+ const interval = 6;
  let activSlide = 0; 
 
  const reset = () => {

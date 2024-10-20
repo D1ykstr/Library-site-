@@ -1,0 +1,36 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-header {
+    margin: auto;
+    background: radial-gradient(#5975FF 5%, #04007f 95%);
+}
+
+.nav-main_link-head {
+    font-size: 30px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.logo-head {
+    position: absolute;
+    width: 263px;
+    height: 100px;
+    left: 36px;
+    top: 39px;
+}

@@ -4,33 +4,82 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    overflow-x: hidden;
-}
-
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container-header {
-    margin: auto;
-    background: radial-gradient(#5975FF 5%, #04007f 95%);
-}
-
-.nav-main_link-head {
-    font-size: 30px;
-    text-decoration: none;
-    color: #FFFFFF;
-}
-
-.logo-head {
+.logo {
     position: absolute;
-    width: 263px;
-    height: 100px;
-    left: 36px;
-    top: 39px;
+    width: 150px;
+    height: 50px;
+    left: 0px;
+    top: 5px;
+  }
+
+.resoursesInfo{
+    position: absolute;
+    width: 956px;
+    height: 263px;
+    left: 53px;
+    top: 320px;
+    color: rgb(0, 0, 0);
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+h2{
+    position: absolute;
+    text-decoration: none;
+    text-align: left;
+    left: 60px;
+    top: 630px;
+}
+
+.ul{
+    position: absolute;
+    width: 900px;
+   
+    left: 70px;
+    top: 640px;
+
+  
+    color: rgb(0, 0, 0);
+    font-family: Roboto;
+    font-size: 23px;
+    
+    font-family: Roboto;
+   
+    letter-spacing: 0%;
+    text-align: left;
+
+}
+
+ /* Стили для контейнера ul */
+ .ul {
+    list-style-type: none; /* Убираем стандартные маркеры списка */
+    padding-left: px; /* Отступ слева */
+}
+
+/* Стили для элементов списка */
+.ul li {
+    position: relative;
+    padding-bottom: 2px; /* Отступ снизу для подчеркивания */
+    display: inline-block; /* Делаем элементы списка блочными, чтобы подчеркивание адаптировалось к ширине текста */
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.ul li::before {
+    content: '.'; /* Добавляем точку перед каждым элементом списка */
+    margin-right: 10px; /* Отступ между точкой и текстом */
+    font-size: 30px;/*Толщина линии*/
+}
+
+.ul li::after {
+    content: '';
+    position: absolute;
+    left: 20px; /* Сдвигаем линию вправо, чтобы она начиналась после точки */
+    bottom: 0;
+    width: calc(100% - 20px); /* Ширина линии минус отступ слева */
+    height: 2px; /* Толщина подчеркивания */
+    background-color: black; 
 }

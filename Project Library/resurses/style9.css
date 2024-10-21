@@ -1,0 +1,24 @@
+footer{
+    position: absolute;
+    width: 1895px;
+    height: 250px;
+    left: -30px;
+    top: 3057px;
+    color: rgb(255, 255, 255);
+    font-family: Poppins;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 68px;
+    letter-spacing: 0%;
+    background: radial-gradient(#1a37c6 5%, #04007f 95%);
+}
+footer .left-bottom,
+        footer .right-bottom {
+            margin: 0;
+        }
+footer .right-bottom{
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+    font-size: 20px;;
+}

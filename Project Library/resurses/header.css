@@ -106,7 +106,7 @@
     color: #FFFFFF;
   }
   
-  li {
+  header>li {
     list-style-type: none
   }
   

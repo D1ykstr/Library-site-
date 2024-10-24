@@ -106,9 +106,6 @@
     color: #FFFFFF;
   }
   
-  li {
-    list-style-type: none
-  }
   
   .wrapper a {
     margin-right: 30px;
@@ -136,18 +133,13 @@
   }
 
 .resoursesInfo{
-    position: absolute;
-    width: 956px;
-    height: 263px;
-    left: 53px;
-    top: 320px;
-    color: rgb(0, 0, 0);
-    font-family: Roboto;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 140%;
-    letter-spacing: 0%;
-    text-align: left;
+  
+      position: absolute;
+      top: 250px;    
+      font-size: 30px;
+      font-family: Roboto;
+      padding: 30px;
+
 }
 h2{
     position: absolute;
@@ -207,3 +199,29 @@ h2{
     background-color: black; 
 }
 
+footer {
+  position: absolute;
+  width: 100%;
+  font-family: Andale Mono, monospace; 
+  height: 129px;
+  top: 1100px;
+  background: linear-gradient(90deg, rgba(15,87,186,1) 23%, rgba(9,9,121,1) 82%);
+  bottom: 0;
+}
+
+footer .left-bottom,
+          footer .right-bottom {
+              margin: 0;
+              font-family: Andale Mono, monospace; 
+              color: #FFFFFF;
+              font-size: 20px;
+              padding: 5px;
+          }
+  footer .right-bottom{
+      position: absolute;
+      bottom: 0;
+      font-family: Andale Mono, monospace;
+      right: 0px;
+      font-size: 20px;;
+      color: #FFFFFF;
+}

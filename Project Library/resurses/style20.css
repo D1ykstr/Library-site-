@@ -1,5 +1,14 @@
+.library
+{
+    position: absolute;
+    top: 250px;    
+    font-size: 30px;
+    font-family: Roboto;
+    padding: 30px;
+    font-size: bold;
+}
 
-.state
+.library2
 {
     position: absolute;
     top: 250px;    
@@ -13,7 +22,7 @@ footer {
     width: 100%;
     font-family: Andale Mono, monospace; 
     height: 129px;
-    top: 1000px;
+    top: 1700px;
     background: linear-gradient(90deg, rgba(15,87,186,1) 23%, rgba(9,9,121,1) 82%);
     bottom: 0;
   }

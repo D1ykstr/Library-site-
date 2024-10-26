@@ -113,7 +113,7 @@ body {
 
 li {
   list-style-type: none;
-  
+
 }
 
 .wrapper a {
@@ -289,47 +289,122 @@ p {
 .container-square {
   display: grid;
   position: absolute;
-  grid-template-columns: repeat(2, 150px); /* Два квадрата в ряд */
-  grid-gap: 20px; /* Отступ между квадратами */
-  margin-left: 60rem;
+  grid-template-columns: repeat(2, 150px);
+  /* Два квадрата в ряд */
+  margin-left: 50rem;
   top: 64rem;
 }
 
-.square {
-  width: 150px;
+.square-1 {
+  width: 300px;
   height: 150px;
-  background-color: rgba(40, 70, 255, 0.2); /* Цвет квадрата */
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2); /* Тень для объёма */
-  border-radius: 10px; /* Закругленные углы для эстетики */
-  transition: transform 0.3s ease; /* Анимация при наведении */
+  background-color: rgba(40, 70, 255, 0.2);
+  /* Цвет квадрата */
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  /* Тень для объёма */
+  border-radius: 10px;
+  /* Закругленные углы для эстетики */
+  transition: transform 0.3s ease;
+  /* Анимация при наведении */
+  margin-top: 2rem;
 }
 
-.square:hover {
-  transform: translateY(-10px); /* Эффект подъема при наведении */
+.square-2 {
+  width: 300px;
+  height: 150px;
+  background-color: rgba(40, 70, 255, 0.2);
+  /* Цвет квадрата */
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  /* Тень для объёма */
+  border-radius: 10px;
+  /* Закругленные углы для эстетики */
+  transition: transform 0.3s ease;
+  /* Анимация при наведении */
+  margin-left: 12rem;
+}
+
+.square-3 {
+  width: 300px;
+  height: 150px;
+  background-color: rgba(40, 70, 255, 0.2);
+  /* Цвет квадрата */
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  /* Тень для объёма */
+  border-radius: 10px;
+  /* Закругленные углы для эстетики */
+  transition: transform 0.3s ease;
+  /* Анимация при наведении */
+  margin-top: 2rem;
+}
+
+.square-4 {
+  width: 300px;
+  height: 150px;
+  background-color: rgba(40, 70, 255, 0.2);
+  /* Цвет квадрата */
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  /* Тень для объёма */
+  border-radius: 10px;
+  /* Закругленные углы для эстетики */
+  transition: transform 0.3s ease;
+  /* Анимация при наведении */
+  margin-left: 12rem;
+}
+
+.square-1:hover,
+.square-2:hover,
+.square-3:hover,
+.square-4:hover {
+  transform: translateY(-10px);
+  
+}
+
+.square-txt {
+  font-size: 2rem;
+ text-align: center;
+  font-weight: 1000;
+  margin: 1rem;
+  color: #3029D9;
+  text-shadow: 2px 2px 0 #B0C4DE, 2px 2px 0 #B0C4DE;
+}
+
+.square-txt-1 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-left: 50px;
+  margin-top: 10px;
+  color: #3029D9;
+  text-shadow: 1px 1px 0 #B0C4DE;
 }
 
 /* Заказ литературы и информация для преподавателей */
 .OT-container {
   display: flex;
-  justify-content: space-between; /* Распределяем элементы с отступами между ними */
-  align-items: flex-start; /* Выравнивание по верхнему краю */
-  gap: 20px; /* Отступ между элементами */
+  justify-content: space-between;
+  /* Распределяем элементы с отступами между ними */
+  align-items: flex-start;
+  /* Выравнивание по верхнему краю */
+  gap: 20px;
+  /* Отступ между элементами */
   margin: 0 11rem 8rem;
-  
+
 }
 
 .order-container,
 .teachers-container {
   display: flex;
-  flex-direction: column; /* Элементы внутри этих контейнеров остаются вертикальными */
-  align-items: flex-start; /* Выравнивание по левому краю */
+  flex-direction: column;
+  /* Элементы внутри этих контейнеров остаются вертикальными */
+  align-items: flex-start;
+  /* Выравнивание по левому краю */
 
 }
 
 .order,
 .teachers {
   font-size: 1.5rem;
-  margin-bottom: 0.5rem; /* Отступ между заголовком и текстом */
+  margin-bottom: 0.5rem;
+  /* Отступ между заголовком и текстом */
 }
 
 .orderInfo,
@@ -340,7 +415,8 @@ p {
 /* Адаптация для маленьких экранов */
 @media (max-width: 768px) {
   .OT-container {
-    flex-direction: column; /* Меняем на вертикальное расположение на малых экранах */
+    flex-direction: column;
+    /* Меняем на вертикальное расположение на малых экранах */
     gap: 10px;
   }
 }

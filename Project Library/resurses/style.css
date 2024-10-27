@@ -246,7 +246,7 @@ p {
 .button {
   margin-top: 2rem;
   text-align: left;
-  margin-left: 11rem;
+  margin-left: 9rem;
 }
 
 .custom-button {
@@ -274,7 +274,7 @@ p {
   position: relative;
   width: 55px;
   height: 55px;
-  left: 21rem;
+  left: 18rem;
   bottom: 2.5rem;
 }
 
@@ -307,6 +307,7 @@ p {
   transition: transform 0.3s ease;
   /* Анимация при наведении */
   margin-top: 2rem;
+  border-radius: 50px 0 50px 50px;
 }
 
 .square-2 {
@@ -321,6 +322,7 @@ p {
   transition: transform 0.3s ease;
   /* Анимация при наведении */
   margin-left: 12rem;
+  border-radius: 50px 50px 50px 0px;
 }
 
 .square-3 {
@@ -335,6 +337,7 @@ p {
   transition: transform 0.3s ease;
   /* Анимация при наведении */
   margin-top: 2rem;
+  border-radius: 50px 0 50px 50px;
 }
 
 .square-4 {
@@ -349,6 +352,7 @@ p {
   transition: transform 0.3s ease;
   /* Анимация при наведении */
   margin-left: 12rem;
+  border-radius: 50px 50px 50px 0px;
 }
 
 .square-1:hover,
@@ -372,10 +376,37 @@ p {
   font-size: 1rem;
   font-weight: 600;
   margin-left: 50px;
-  margin-top: 10px;
+  margin-top: 15px;
   color: #3029D9;
   text-shadow: 1px 1px 0 #B0C4DE;
 }
+
+.square-main {
+  position: relative;
+  width: 650px;
+  height: 630px;
+  background-color: rgba(255, 255, 255, 0.2);
+  /* Цвет квадрата */
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  /* Тень для объёма */
+  border-radius: 30px;
+  /* Закругленные углы для эстетики */
+  transition: transform 0.3s ease;
+  /* Анимация при наведении */
+  margin-left: 1rem;
+}
+.square-main>h1 {
+  text-align: center;
+  margin-left: 10px;
+}
+.square-main>p {
+  font-size: 0.8rem;
+ text-align: center;
+  font-weight: 1000;
+  margin: 1rem;
+  color: #646A72;
+  
+} 
 
 /* Заказ литературы и информация для преподавателей */
 .OT-container {
@@ -386,8 +417,41 @@ p {
   /* Выравнивание по верхнему краю */
   gap: 20px;
   /* Отступ между элементами */
-  margin: 0 11rem 8rem;
+  margin: 1rem 13rem 8rem 1rem;
+}
 
+.order-square {
+  position: relative;
+  width: 650px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.2);
+  /* Цвет квадрата */
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  /* Тень для объёма */
+  border-radius: 30px;
+  /* Закругленные углы для эстетики */
+  transition: transform 0.3s ease;
+  /* Анимация при наведении */
+}
+
+.teachers-square {
+  position: relative;
+  width: 650px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.2);
+  /* Цвет квадрата */
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  /* Тень для объёма */
+  border-radius: 30px;
+  /* Закругленные углы для эстетики */
+  transition: transform 0.3s ease;
+  /* Анимация при наведении */
+}
+
+.square-main:hover,
+.order-square:hover,
+.teachers-square:hover {
+  transform: translateY(-5px);
 }
 
 .order-container,
@@ -403,13 +467,15 @@ p {
 .order,
 .teachers {
   font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  margin-left: 30px;
   /* Отступ между заголовком и текстом */
 }
 
 .orderInfo,
 .teachersInfo {
   font-size: 1rem;
+  margin-left: 30px;
 }
 
 /* Адаптация для маленьких экранов */
@@ -423,25 +489,42 @@ p {
 
 
 /* Новости */
+
+@keyframes jitter {
+  0%, 100% { transform: translate(0, 0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(2px, -2px); }
+  60% { transform: translate(-2px, -2px); }
+  80% { transform: translate(2px, 2px); }
+}
+
 .news {
   font-size: 2rem;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
+
+.news:hover {
+  animation: jitter 0.3s infinite;
+}
+
 
 .main-news {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  
 }
 
 .firstNew,
 .secondNew,
-.thirdNew {
+.thirdNew,
+.fouthNew {
   width: 100%;
   max-width: 300px;
   border: 1px solid #ccc;
-  margin: 1rem 0 4rem;
+  margin: rem 0 rem;
   position: relative;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
@@ -449,13 +532,15 @@ p {
 
 .firstNew:hover,
 .secondNew:hover,
-.thirdNew:hover {
+.thirdNew:hover,
+.fouthNew:hover {
   transform: translateY(-5px);
 }
 
 .infoFirstNew,
 .infoSecondNew,
-.infoThirdNew {
+.infoThirdNew,
+.infoFouthNew {
   font-size: 1.5rem;
   text-align: center;
   padding: 1rem;

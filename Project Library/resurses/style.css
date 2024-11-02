@@ -3,9 +3,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: 'Cygre';
+  src: url('fonts/Cygre.ttf') format('truetype'),
+       url('fonts/Cygre.otf') format('opentype'),
+       url('fonts/Cygre.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Cygre', sans-serif;
   overflow-x: hidden;
 }
 
@@ -60,7 +68,7 @@ body {
   top: 49vh;
   left: 9%;
   transform: translateX(-50%);
-  font-family: monospace;
+  font-family: 'Cygre', sans-serif;
   font-size: 2rem;
   font-weight: 400;
   line-height: 1.4;
@@ -637,7 +645,7 @@ p {
 footer {
   position: relative;
   width: 100%;
-  font-family: Andale Mono, monospace;
+  font-family: 'Cygre', sans-serif;
   height: 100%;
   background: linear-gradient(90deg, rgba(15, 87, 186, 1) 23%, rgba(9, 9, 121, 1) 82%);
   bottom: 0;
@@ -647,7 +655,7 @@ footer {
 footer .left-bottom,
 footer .right-bottom {
   margin: 0;
-  font-family: Andale Mono, monospace;
+  font-family: 'Cygre', sans-serif;
   color: #FFFFFF;
   font-size: 20px;
   padding: 5px;
@@ -655,8 +663,7 @@ footer .right-bottom {
 
 footer .right-bottom {
 
-  font-family: Andale Mono, monospace;
-
+  font-family: 'Cygre', sans-serif;
   font-size: 20px;
   ;
   color: #FFFFFF;

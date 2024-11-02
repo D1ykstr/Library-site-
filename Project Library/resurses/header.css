@@ -1,136 +1,206 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    overflow-x: hidden;
-    max-width: 100%;
-    max-height: 100%;
-  }
-  
-  .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .container-header {
-    margin: auto;
-    background: radial-gradient(#1a37c6 5%, #04007f 95%);
-  }
-  
-  .nav-main_link-head {
-    font-size: 30px;
-    text-decoration: none;
-    color: #FFFFFF;
-  }
-  
-  .logo-head {
-    position: absolute;
-    width: 263px;
-    height: 100px;
-    left: 36px;
-    top: 39px;
-  }
-  
-  .slider-img {
-    position: absolute;
-    width: 743px;
-    height: 500px;
-    left: 720px;
-    top: 200px;
-    border-radius: 100px;
-  
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  
+body {
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+.default-container {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(#3750d1 5%, #04007f 95%);
+  margin: 0 auto;
+  height: 15vh;
+  /* Высота на 100% экрана */
+}
+
+.nav-main_link-head {
+  font-size: 1.6rem;
+  /* Относительный размер шрифта */
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.logo-head {
+  position: absolute;
+  width: 15vw;
+  /* Задаем ширину в процентах от ширины экрана */
+  top: -1.5rem;
+  margin-left: 1rem;
+}
+
+.slider-img {
+  position: relative;
+  /* Устанавливаем относительное позиционирование */
+  width: 50vw;
+  /* Процентная ширина */
+  max-width: 700px;
+  /* Ограничение максимальной ширины */
+  height: auto;
+  /* Сохраняем пропорции картинки */
+  left: 60%;
+  top: 20vh;
+  /* Процент от высоты экрана */
+  transform: translateX(-50%);
+  /* Центрируем картинку по горизонтали */
+  border-radius: 20px;
+  /* Уменьшил радиус для адаптивности */
+}
+
+.slider-img-txt>.p-head {
+  color: #FFFFFF;
+  position: absolute;
+  max-width: 90vw;
+  /* Ограничение ширины для мобильных устройств */
+  top: 49vh;
+  left: 9%;
+  transform: translateX(-50%);
+  font-family: monospace;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.wrapper {
+  position: relative;
+  z-index: 1;
+  height: 54px;
+  top: 5vh;
+}
+
+.wrapper .menu {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  /* Центрируем меню */
+}
+
+.menu-item {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #3029D9;
+  box-shadow: 0px 8px 16px rgba(254, 254, 254, 0.326);
+  border-radius: 27px;
+  z-index: 1;
+}
+
+.submenu>a:hover {
+  text-decoration: underline;
+}
+
+.menu-item:hover .submenu {
+  display: block;
+}
+
+.submenu-link {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+li {
+  list-style-type: none;
+
+}
+
+.wrapper a {
+  margin-right: 1.5rem;
+}
+
+.next-main-slider-dots {
+  display: flex;
+  position: absolute;
+  bottom: 128px;
+  /* Располагаем индикаторы ниже картинки */
+  left: 57%;
+  transform: translateX(-50%);
+}
+
+.next-main-slider-dots>span {
+  width: 13px;
+  height: 13px;
+  background-color: #808080;
+  z-index: 1;
+  margin-left: 13px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.next-main-slider-dots>span.active {
+  background-color: #DFDFDF;
+}
+
+/* Адаптивность */
+
+@media (max-width: 768px) {
   .wrapper {
-    position: absolute;
-    width: 1440px;
-    height: 54px;
-    left: 338px;
-    right: 92px;
-    top: 71px;
-    bottom: 915px;
-    z-index: 1;
+    top: 3vh;
   }
-  
+
   .wrapper .menu {
-    display: flex;
-    list-style-type: none;
-    /* Убираем стандартные маркеры списка */
-    position: relative;
-    /* Убираем возможность смещения */
-    z-index: 10;
-    /* Повышаем приоритет меню, чтобы оно всегда было выше остальных элементов */
+    flex-direction: column;
+    /* Для узких экранов меню будет вертикальным */
+    margin-left: 0;
   }
-  
-  .menu-item {
-    position: relative;
-    margin: 0 0px;
-    /* Задаем отступы между элементами списка */
-  }
-  
-  .submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    /* Меню появится под основным элементом */
-    left: 0;
-    background-color: #3029D9;
-    box-shadow: 0px 8px 16px rgba(254, 254, 254, 0.326);
-    /* Для эффекта выпадающего меню */
-    border-radius: 27px;
-    z-index: 1;
-  
-  }
-  
-  .submenu>a:hover {
-    text-decoration: underline;
-  }
-  
-  .menu-item:hover .submenu {
-    display: block;
-    /* Показываем подменю при наведении */
-  }
-  
-  .submenu-link {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: #FFFFFF;
-  }
-  
-  header>li {
-    list-style-type: none
-  }
-  
+
   .wrapper a {
-    margin-right: 30px;
+    margin-right: 0;
+    margin-bottom: 1rem;
+    text-align: center;
   }
-  
-  
+
+  .logo-head {
+    width: 25vw;
+    top: 0;
+  }
+
+  .slider-img {
+    width: 90vw;
+    /* Увеличиваем на мобильных устройствах */
+    height: auto;
+    top: 30vh;
+  }
+
+  .slider-img-txt>.p-head {
+    font-size: 1.5rem;
+    top: 80vh;
+  }
+
   .next-main-slider-dots {
-    
-    margin-top: 200px;
+    top: 95vh;
   }
-  
-  .next-main-slider-dots>span {
-    width: 13px;
-    height: 13px;
-    background-color: #808080;
-    z-index: 1;
-    margin: 516px 0 0 13px;
-    border-radius: 50%;
-    cursor: pointer;
-  
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .wrapper .menu {
+    margin-left: 200px;
   }
-  
-  .next-main-slider-dots>span.active {
-    background-color: #DFDFDF;
+
+  .slider-img {
+    width: 60vw;
+    height: auto;
+    top: 25vh;
   }
+
+  .slider-img-txt>.p-head {
+    font-size: 2rem;
+    top: 70vh;
+  }
+
+  .next-main-slider-dots {
+    top: 90vh;
+  }
+}

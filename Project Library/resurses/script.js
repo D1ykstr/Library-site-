@@ -65,3 +65,10 @@ menu.addEventListener('click', () => {
           is_open = 0;
      }
 })
+
+function toggleMenu() {
+     // Переключаем класс `active` для меню
+     document.querySelector('.menu').classList.toggle('active');
+     // Переключаем класс `open` для иконки Navicon
+     document.querySelector('.nav-icon').classList.toggle('open');
+ }
